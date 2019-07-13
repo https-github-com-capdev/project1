@@ -15,8 +15,7 @@ pipeline {
         echo "Continuing with deployment"
       }
     }
-         
-         
- }
-   }
+  }
+}
+ 
 
