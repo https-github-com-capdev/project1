@@ -14,6 +14,12 @@ pipeline {
       steps {
         echo "Continuing with deployment"
       }
+      stage('Checkpoint') {
+         agent none
+         steps {
+            checkpoint 'Checkpoint'
+         }
+      }
     }
   }
 }
