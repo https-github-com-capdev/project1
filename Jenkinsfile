@@ -2,7 +2,12 @@ pipeline {
    agent any
    stages {
       stage('Say Hello') {
-         stage('Deploy') {
+        steps {
+            echo 'Hello World!'   
+            sh 'java -version'
+        }
+      }
+      stage('Deploy') {
       input {
         message "Should we continue?"
       }
@@ -10,11 +15,8 @@ pipeline {
         echo "Continuing with deployment"
       }
     }
-         steps {
-            echo 'Hello World!'   
-            sh 'java -version'
-         }
-      }
+         
+         
+ }
    }
-}
 
